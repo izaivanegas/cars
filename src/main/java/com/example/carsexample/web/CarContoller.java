@@ -22,6 +22,12 @@ public class CarContoller {
         return ResponseEntity.ok(carService.getAllCars());
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Car> getCar( ){
+
+        return null;
+    }
+
 
 
 }
