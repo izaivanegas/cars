@@ -34,7 +34,6 @@ public class CarServiceImpl implements CarService{
 
     @Override
     public ResponseEntity getCar(Integer id) {
-        System.out.println("Esto esta psando a");
         Car carResult = null;
         datos = new HashMap<>();
         HttpStatus statusFinal = HttpStatus.CONFLICT;
