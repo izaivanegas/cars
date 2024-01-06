@@ -2,9 +2,7 @@ package com.example.carsexample.web;
 
 import com.example.carsexample.service.CarService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import com.example.carsexample.domain.Car;
 import java.util.List;
 @RestController
@@ -22,10 +20,9 @@ public class CarContoller {
         return ResponseEntity.ok(carService.getAllCars());
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Car> getCar( ){
-
-        return null;
+    @GetMapping(path = "{id}")
+    public ResponseEntity<Car> getCar( @PathVariable("id") int id ){
+        return carService.getCar(id);
     }
 
 
