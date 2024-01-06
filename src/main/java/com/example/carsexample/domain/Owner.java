@@ -24,6 +24,8 @@ public class Owner {
     private String lastName;
 
 
+    /*@JsonManagedReference
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")*/
 
     @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
