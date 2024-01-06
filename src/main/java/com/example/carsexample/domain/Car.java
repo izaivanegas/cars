@@ -30,9 +30,9 @@ public class Car {
     private int price;
 
 
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "owner_id")
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private Owner owner;
 
 

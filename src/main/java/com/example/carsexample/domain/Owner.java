@@ -2,6 +2,7 @@ package com.example.carsexample.domain;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
@@ -24,9 +25,9 @@ public class Owner {
 
 
 
+    @JsonIgnore
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
-    //@JsonIgnore
+    @ToString.Exclude
     private List<Car> cars;
-
 
 }
