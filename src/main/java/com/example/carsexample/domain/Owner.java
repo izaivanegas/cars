@@ -16,7 +16,7 @@ import java.util.List;
 @AllArgsConstructor
 public class Owner {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @Column
     private String firstName;

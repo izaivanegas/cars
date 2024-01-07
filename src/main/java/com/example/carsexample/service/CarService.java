@@ -14,6 +14,13 @@ public interface CarService {
     public List<Car> getAllCarsByColor(String color);
     public ResponseEntity<Car> getCar(Integer id);
 
+    /**
+     * Se guarda un auto en la base de datos
+     * @param car
+     * @return
+     */
+    public ResponseEntity addCar(Car car);
+
 
 
 }
