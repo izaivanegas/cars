@@ -49,5 +49,16 @@ public class CarContoller {
         return carService.addCar(car);
     }
 
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity deleteCar(@PathVariable("id") int id){
+        log.info("Delete car");
+        return carService.deleteCar(id);
+    }
+
+
+    @PutMapping("/update/{id}")
+    public ResponseEntity updateCar(@PathVariable("id") int id, @RequestBody Car car){
+        return carService.updateCar(id, car);
+    }
 
 }

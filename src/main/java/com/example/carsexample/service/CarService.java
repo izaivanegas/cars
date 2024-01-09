@@ -21,6 +21,20 @@ public interface CarService {
      */
     public ResponseEntity addCar(Car car);
 
+    /**
+     * Borrar un auto
+     * @param id
+     * @return
+     */
+    public ResponseEntity deleteCar(Integer id);
+
+    /**
+     * Actualizar la informacion de un auto
+     * @param id
+     * @return
+     */
+    public ResponseEntity updateCar(Integer id, Car car);
+
 
 
 }
